@@ -36,28 +36,29 @@ menu()
 underscores()
 # ask the user which difficulty they would like
 user_choice = int(input("Enter a number and press enter: "))
+times_used = 0
 if user_choice == 1:
     print("You have chosen difficulty 1")
     underscores()
-    question_1 = (DIF_1_QUESTIONS[0])
+    question_1 = (DIF_1_QUESTIONS[times_used])
     answer_1 = int(input("{}: ".format(question_1)))
 elif user_choice == 2:
     print("You have chosen difficulty 2")
     underscores()
-    question_2 = random.choice(DIF_2_QUESTIONS)
+    question_2 = (DIF_2_QUESTIONS[times_used])
     answer_2 = int(input("{}: ".format(question_2)))
 elif user_choice == 3:
     print("You have chosen difficulty 3")
     underscores()
-    question_3 = random.choice(DIF_3_QUESTIONS)
+    question_3 = (DIF_3_QUESTIONS[times_used])
     answer_3 = int(input("{}: ".format(question_3)))
 elif user_choice == 4:
     print("You have chosen difficulty 4")
     underscores()
-    question_4 = random.choice(DIF_4_QUESTIONS)
+    question_4 = (DIF_4_QUESTIONS[times_used])
     answer_4 = int(input("{}: ".format(question_4)))
 elif user_choice == 5:
     print("You have chosen difficulty 5")
     underscores()
-    question_5 = random.choice(DIF_5_QUESTIONS)
+    question_5 = (DIF_5_QUESTIONS[times_used])
     answer_5 = int(input("{}: ".format(question_5)))
