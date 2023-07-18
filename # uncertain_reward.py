@@ -39,7 +39,7 @@ user_choice = int(input("Enter a number and press enter: "))
 if user_choice == 1:
     print("You have chosen difficulty 1")
     underscores()
-    question_1 = random.choice(DIF_1_QUESTIONS)
+    question_1 = (DIF_1_QUESTIONS[0])
     answer_1 = int(input("{}: ".format(question_1)))
 elif user_choice == 2:
     print("You have chosen difficulty 2")
