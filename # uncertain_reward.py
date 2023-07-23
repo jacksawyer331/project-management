@@ -54,7 +54,7 @@ question_loop = True
 while question_loop is True:
     user_choice = int(input("Enter a number and press enter: "))
     if user_choice == 1:
-        if times_used_1 < 5:
+        if times_used_1 > 5:
             print("You have chosen difficulty 1")
             underscores()
             question_1 = (DIF_1_QUESTIONS[times_used_1])
@@ -66,8 +66,8 @@ while question_loop is True:
                     "Correct, you have gained 5 points. You now have {} points"
                     .format(points))
                 underscores()
-        else:
-            print("Sorry there are no more level 1 questions")
+        elif times_used_1 >= 5:
+            print("Sorry, there are no more level 1 questions")
     elif user_choice == 2:
         print("You have chosen difficulty 2")
         underscores()
