@@ -54,27 +54,67 @@ question_loop = True
 while question_loop is True:
     user_choice = int(input("Enter a number and press enter: "))
     if user_choice == 1:
-        if times_used_1 < 4:
-            print("You have chosen difficulty 1")
-            underscores()
-            question_1 = (DIF_1_QUESTIONS[times_used_1])
-            answer_1 = int(input("{}: ".format(question_1)))
-            if answer_1 == (DIF_1_ANSWERS[times_used_1]):
-                points += 5
-                times_used_1 += 1
-                print(
-                    "Correct, you have gained 5 points. You now have {} points"
-                    .format(points))
+        try:
+            if times_used_1 < 4:
+                print("You have chosen difficulty 1")
                 underscores()
-        elif times_used_1 >= 4:
+                question_1 = (DIF_1_QUESTIONS[times_used_1])
+                answer_1 = int(input("{}: ".format(question_1)))
+                if answer_1 == (DIF_1_ANSWERS[times_used_1]):
+                    points += 5
+                    times_used_1 += 1
+                    print(
+                        "Correct, you have gained 5 points. You have {} points"
+                        .format(points))
+                    underscores()
+                else:
+                    times_used_1 += 1
+                    print(
+                        "Incorrect, you have gained 0 points. "
+                        "You have {} points"
+                        .format(points))
+                    underscores()
+            elif times_used_1 >= 4:
+                underscores()
+                print("Sorry, there are no more level 1 questions")
+                underscores()
+        except ValueError:
+            times_used_1 += 1
+            print("Incorrect, you have gained 0 points. You have {} points"
+                  .format(points))
             underscores()
-            print("Sorry, there are no more level 1 questions")
-            underscores()
+            # 2nd difficulty questions
     elif user_choice == 2:
-        print("You have chosen difficulty 2")
-        underscores()
-        question_2 = (DIF_2_QUESTIONS[times_used_2])
-        answer_2 = int(input("{}: ".format(question_2)))
+        try:
+            if times_used_2 < 4:
+                print("You have chosen difficulty 2")
+                underscores()
+                question_2 = (DIF_2_QUESTIONS[times_used_2])
+                answer_2 = int(input("{}: ".format(question_2)))
+                if answer_2 == (DIF_2_ANSWERS[times_used_2]):
+                    points += 10
+                    times_used_2 += 1
+                    print(
+                        "Correct, you have gained 10 points. You have {} "
+                        "points"
+                        .format(points))
+                    underscores()
+                else:
+                    times_used_2 += 1
+                    print(
+                        "Incorrect, you have gained 0 points. "
+                        "You have {} points"
+                        .format(points))
+                    underscores()
+            elif times_used_2 >= 4:
+                underscores()
+                print("Sorry, there are no more level 2 questions")
+                underscores()
+        except ValueError:
+            times_used_2 += 1
+            print("Incorrect, you have gained 0 points. You have {} points"
+                  .format(points))
+            underscores()
     elif user_choice == 3:
         print("You have chosen difficulty 3")
         underscores()
