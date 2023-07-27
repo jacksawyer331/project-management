@@ -228,4 +228,5 @@ while question_loop is True:
                 underscores()
     elif total_times_used >= 20:
         question_loop = False
-        print("Sorry you've answered all the questions")
+        print("You have answered all questions in this quiz. "
+              "You ended with {} points".format(points))
