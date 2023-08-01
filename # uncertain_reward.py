@@ -40,7 +40,8 @@ def menu():
 
 
 # print the menu that will the user what difficulty they would like
-print("Welcome to the game where you never know what you're going to get")
+print("This is a quiz in which you'll be asked questions of a certain difficulty")
+print("")
 total_times_used = 0
 correct_questions = 0
 times_used_1 = 0
