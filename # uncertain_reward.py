@@ -42,6 +42,7 @@ def menu():
 # print the menu that will the user what difficulty they would like
 print("Welcome to the game where you never know what you're going to get")
 total_times_used = 0
+correct_questions = 0
 times_used_1 = 0
 times_used_2 = 0
 times_used_3 = 0
@@ -66,6 +67,7 @@ while question_loop is True:
                         points += 5
                         times_used_1 += 1
                         total_times_used += 1
+                        correct_questions += 1
                         print(
                             "Correct, you have gained 5 points. You have {} "
                             "points"
@@ -101,6 +103,7 @@ while question_loop is True:
                         points += 10
                         times_used_2 += 1
                         total_times_used += 1
+                        correct_questions += 1
                         print(
                             "Correct, you have gained 10 points. You have {} "
                             "points"
@@ -135,6 +138,7 @@ while question_loop is True:
                         points += 15
                         times_used_3 += 1
                         total_times_used += 1
+                        correct_questions += 1
                         print(
                             "Correct, you have gained 15 points. You have {} "
                             "points"
@@ -169,6 +173,7 @@ while question_loop is True:
                         points += 20
                         times_used_4 += 1
                         total_times_used += 1
+                        correct_questions += 1
                         print(
                             "Correct, you have gained 20 points. You have {} "
                             "points"
@@ -203,6 +208,7 @@ while question_loop is True:
                         points += 25
                         times_used_5 += 1
                         total_times_used += 1
+                        correct_questions += 1
                         print(
                             "Correct, you have gained 25 points. You have {} "
                             "points"
@@ -228,5 +234,7 @@ while question_loop is True:
                 underscores()
     elif total_times_used >= 20:
         question_loop = False
-        print("You have answered all questions in this quiz. "
-              "You ended with {} points".format(points))
+        print("You have answered all questions in this quiz.")
+        print("You answered {}/20 questions correctly ".format
+              (correct_questions))
+        print("You ended with {} points".format(points))
