@@ -40,7 +40,8 @@ def menu():
 
 
 # print the menu that will the user what difficulty they would like
-print("This is a quiz in which you'll be asked questions of a certain difficulty")
+print("This is a quiz in which you'll be asked questions of a certain "
+      "difficulty")
 print("")
 total_times_used = 0
 correct_questions = 0
@@ -233,6 +234,8 @@ while question_loop is True:
                 print("Incorrect, you have gained 0 points. You have {} points"
                       .format(points))
                 underscores()
+        else:
+            print("Please enter a valid option")
     elif total_times_used >= 20:
         question_loop = False
         print("You have answered all questions in this quiz.")
