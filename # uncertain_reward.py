@@ -1,7 +1,7 @@
 # uncertain_reward.py
 # Author: Jack
 # 21/06/23
-import random
+import time
 
 
 def underscores():
@@ -11,13 +11,25 @@ def underscores():
     print("")
 
 
-# Create a list of possible questions
+def linebreak():
+    """print linebreak."""
+    print("-" * 70)
+
+
+# Create a list of questions
 DIF_1_QUESTIONS = ["5 + 2", "9 - 6", "3 x 3", "9 / 3"]
 DIF_2_QUESTIONS = ["7 + 6", "15 - 7", "4 x 5", "12 / 3"]
 DIF_3_QUESTIONS = ["76 + 39", "45 - 27", "13 x 5", "42 / 6"]
 DIF_4_QUESTIONS = ["136 + 379", "769 - 586", "78 x 34", "786 / 3"]
 DIF_5_QUESTIONS = ["1075 + 3567", "6547 - 3897", "152 x 384", "3056 / 8"]
 
+
+# Create a list of bonus questions
+DIF_1_BONUS = ["7 + 9", "18 - 9", "6 x 3", "16 / 4"]
+DIF_2_BONUS = ["58 + 45", "72 - 29", "15 x 4", "64 / 8"]
+DIF_3_BONUS = ["275 + 567", "859 - 375", "56 x 65", "844 / 4"]
+DIF_4_BONUS = ["2768 + 5687", "9485 - 3846", "784 x 323", "4568 / 8"]
+DIF_5_BONUS = ["84654 + 47845", "74855 - 65343", "1024 x 6573", "55642 / 2"]
 
 # Create lists for the asnwers
 DIF_1_ANSWERS = [7, 3, 9, 3]
@@ -42,7 +54,15 @@ def menu():
 # print the menu that will the user what difficulty they would like
 print("This is a quiz in which you'll be asked questions of a certain "
       "difficulty")
-print("")
+linebreak()
+print("If you answer the question correctly you wil be given "
+      "the option to answer a bonus question")
+linebreak()
+print("If you answer the bonus question correctly, you will earn bonus points")
+linebreak()
+print("However, if you answer incorrectly, you will be deducted points")
+underscores()
+time.sleep(5)
 total_times_used = 0
 correct_questions = 0
 times_used_1 = 0
