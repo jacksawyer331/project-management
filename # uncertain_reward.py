@@ -112,12 +112,11 @@ while question_loop is True:
                             try:
                                 if bonus_1 == "y" or bonus_1 == "Y":
                                     underscores()
-                                    bonus_question_1 = (DIF_1_BONUS[
+                                    b_question_1 = (DIF_1_BONUS[
                                         times_used_1])
                                     bonus_1_answer = int(input("{}: "
                                                                .format
-                                                               (
-                                                                   bonus_question_1)))
+                                                               (b_question_1)))
                                     # give the user the correct amount of
                                     # points if they get the answer correct
                                     if bonus_1_answer == (BONUS_1_ANSWERS
@@ -199,11 +198,11 @@ while question_loop is True:
                             try:
                                 if bonus_2 == "y" or bonus_2 == "Y":
                                     underscores()
-                                    bonus_question_2 = (DIF_2_BONUS[
+                                    b_question_2 = (DIF_2_BONUS[
                                         times_used_2])
                                     bonus_2_answer = int(input("{}: "
                                                                .format
-                                                               (bonus_question_2)))
+                                                               (b_question_2)))
                                     if bonus_2_answer == (BONUS_2_ANSWERS
                                                           [times_used_2]):
                                         points += 20
@@ -282,11 +281,11 @@ while question_loop is True:
                             try:
                                 if bonus_3 == "y" or bonus_3 == "Y":
                                     underscores()
-                                    bonus_question_3 = (DIF_3_BONUS[
+                                    b_question_3 = (DIF_3_BONUS[
                                         times_used_3])
                                     bonus_3_answer = int(input("{}: "
                                                                .format
-                                                               (bonus_question_3)))
+                                                               (b_question_3)))
                                     if bonus_3_answer == (BONUS_3_ANSWERS
                                                           [times_used_3]):
                                         points += 30
@@ -364,11 +363,11 @@ while question_loop is True:
                             try:
                                 if bonus_4 == "y" or bonus_4 == "Y":
                                     underscores()
-                                    bonus_question_4 = (DIF_4_BONUS[
+                                    b_question_4 = (DIF_4_BONUS[
                                         times_used_4])
                                     bonus_4_answer = int(input("{}: "
                                                                .format
-                                                               (bonus_question_4)))
+                                                               (b_question_4)))
                                     if bonus_4_answer == (BONUS_4_ANSWERS
                                                           [times_used_4]):
                                         points += 40
@@ -446,11 +445,11 @@ while question_loop is True:
                             try:
                                 if bonus_5 == "y" or bonus_5 == "Y":
                                     underscores()
-                                    bonus_question_5 = (DIF_5_BONUS[
+                                    b_question_5 = (DIF_5_BONUS[
                                         times_used_5])
                                     bonus_5_answer = int(input("{}: "
                                                                .format
-                                                               (bonus_question_5)))
+                                                               (b_question_5)))
                                     if bonus_5_answer == (BONUS_5_ANSWERS
                                                           [times_used_5]):
                                         points += 50
