@@ -506,6 +506,7 @@ while question_loop is True:
                     underscores()
             elif user_choice == 6:
                 question_loop = False
+                underscores()
                 print("You answered {}/20 questions correctly".format
                       (correct_questions))
                 print("You answered {}/20 bonus questions correctly"
